@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:backgroundTint="#000000"
+    tools:context=".MainActivity">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintBottom_toTopOf="@+id/viewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:textAlignment="textStart"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="IP Scanner"
+                app:titleTextColor="#E9FD35"
+                android:textSize="40sp"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="151dp"
+        android:layout_height="76dp"
+        android:background="#00FFFFFF"
+        android:text="SCAN!"
+        android:textColor="#E9FD35"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.393"
+        tools:text="SCAN!" />
+
+    <TextView
+        android:id="@+id/wifi_status"
+        android:layout_width="373dp"
+        android:layout_height="58dp"
+        android:text="TURN ON WIFI HAX0R!"
+        android:textColor="#E9FD35"
+        android:textSize="36sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ip_progress_bar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/ip_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="225dp"
+        android:layout_height="67dp"
+        android:background="#00C04444"
+        android:progressTint="#E9FD35"
+        android:scrollbarSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start"
+        app:layout_constraintVertical_bias="0.002" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
